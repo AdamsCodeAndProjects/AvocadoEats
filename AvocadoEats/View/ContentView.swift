@@ -23,17 +23,24 @@ struct ContentView: View {
                     }
                 }
                 
+                // Body
+                Text("Avocado Dishes")
+                    .fontWeight(.bold)
+                    .modifier(titleModifier())
+                
+                DishesView()
+                    .frame(maxWidth: 640)
+                
                 // Footer
                 VStack(alignment: .center, spacing: 20) {
                     Text("All About Avocados")
-                        .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("ColorGreenAdapt"))
-                    .padding(8)
+                        .modifier(titleModifier())
                     Text("Everything you wanted to know about avocados but were afraid to ask")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.gray)
+                        .frame(minHeight: 60)
                 }
                 .frame(maxWidth: 640)
                 .padding()
@@ -42,6 +49,15 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .padding(0)
+    }
+}
+
+struct titleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .foregroundColor(Color("ColorGreenAdapt"))
+            .padding(8)
     }
 }
 

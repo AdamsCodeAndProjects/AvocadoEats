@@ -18,6 +18,7 @@
 		66BE9397282D6AC20095FDE7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE9396282D6AC20095FDE7 /* HeaderView.swift */; };
 		66BE9399282D84870095FDE7 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE9398282D84870095FDE7 /* HeaderModel.swift */; };
 		66BE939B282D84BF0095FDE7 /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE939A282D84BF0095FDE7 /* HeaderData.swift */; };
+		66BE939D282D8B9A0095FDE7 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE939C282D8B9A0095FDE7 /* DishesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		66BE9396282D6AC20095FDE7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		66BE9398282D84870095FDE7 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		66BE939A282D84BF0095FDE7 /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
+		66BE939C282D8B9A0095FDE7 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				66BE9392282D5F9F0095FDE7 /* SettingsView.swift */,
 				66BE9394282D5FAB0095FDE7 /* AppView.swift */,
 				66BE9396282D6AC20095FDE7 /* HeaderView.swift */,
+				66BE939C282D8B9A0095FDE7 /* DishesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				66BE937D282D4E9C0095FDE7 /* AvocadoEatsApp.swift in Sources */,
 				66BE9399282D84870095FDE7 /* HeaderModel.swift in Sources */,
 				66BE939B282D84BF0095FDE7 /* HeaderData.swift in Sources */,
+				66BE939D282D8B9A0095FDE7 /* DishesView.swift in Sources */,
 				66BE9397282D6AC20095FDE7 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
