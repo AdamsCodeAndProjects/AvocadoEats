@@ -11,7 +11,8 @@ struct RecipeDetailView: View {
     
     var recipe: Recipe
     
-    @State private var pulsate: Bool = false
+    @State private var pulsate: Bool = false  // Used to pulsate for animation
+    @Environment(\.presentationMode) var presentationMode  // Used to dismiss the sheet in popup
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -86,7 +87,7 @@ struct RecipeDetailView: View {
                 VStack {
                     
                     Button(action: {
-                        // ACTION NEEDED!!!!!!!!!!!!!!
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Image(systemName: "chevron.down.circle.fill")
                             .font(.title)
