@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     var headers: [Header] = headersData
+    var facts: [Fact] = factsData
+    var recipes: [Recipe] = recipesData
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -23,13 +26,42 @@ struct ContentView: View {
                     }
                 }
                 
-                // Body
+                // MARK: - DISHES
                 Text("Avocado Dishes")
                     .fontWeight(.bold)
                     .modifier(titleModifier())
                 
                 DishesView()
                     .frame(maxWidth: 640)
+                
+                // MARK: - AVOCADO FACTS
+                Text("Avocado Facts")
+                    .fontWeight(.bold)
+                    .modifier(titleModifier())
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 60) {
+                        ForEach(facts) { item in
+                            FactsView(fact: item)
+                        }
+                    }
+                    .padding(.vertical)
+                    .padding(.leading, 60)
+                    .padding(.trailing, 20)
+                }
+                
+                // MARK: - RECIPE CARDS
+                Text("Avocado Recipes")
+                    .fontWeight(.bold)
+                    .modifier(titleModifier())
+                
+                VStack(alignment: .center, spacing: 20) {
+                    ForEach(recipes) { item in
+                        RecipeCardView(recipe: item)
+                    }
+                }
+                .frame(maxWidth: 640)
+                .padding(.horizontal)
                 
                 // Footer
                 VStack(alignment: .center, spacing: 20) {
@@ -63,6 +95,6 @@ struct titleModifier: ViewModifier {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(headers: headersData)
+        ContentView(headers: headersData, facts: factsData, recipes: recipesData)
     }
 }
